@@ -1,3 +1,5 @@
+target/
+.idea/
 # Default ignored files
 /shelf/
 /.idea/workspace.xml
@@ -7,5 +9,4 @@
 /dataSources/
 /dataSources.local.xml
 
-target/
-.idea/
+
