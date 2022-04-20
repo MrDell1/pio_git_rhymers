@@ -5,13 +5,13 @@ public class DefaultCountingOutRhymer {
 	public static final int MAX_SIZE = 12;
 	public static final int DEFAULT = -1;
 	public static final int INITIAL = -1;
-	private final int[] NUMBERS = new int[MAX_SIZE];
+	private final int[] numbers = new int[MAX_SIZE];
 
 	public int total = INITIAL;
 
 	public void countIn(int in) {
 		if (!isFull())
-			NUMBERS[++total] = in;
+			numbers[++total] = in;
 	}
 
 	public boolean callCheck() {
@@ -25,13 +25,13 @@ public class DefaultCountingOutRhymer {
 	protected int peekaboo() {
 		if (callCheck())
 			return DEFAULT;
-		return NUMBERS[total];
+		return numbers[total];
 	}
 
 	public int countOut() {
 		if (callCheck())
 			return DEFAULT;
-		return NUMBERS[total--];
+		return numbers[total--];
 	}
 
 }
