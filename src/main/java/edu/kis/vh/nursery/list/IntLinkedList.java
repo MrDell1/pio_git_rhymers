@@ -1,5 +1,7 @@
 package edu.kis.vh.nursery.list;
 
+import static edu.kis.vh.nursery.DefaultCountingOutRhymer.ERR_CODE;
+
 public class IntLinkedList {
 
 	Node last;
@@ -25,13 +27,13 @@ public class IntLinkedList {
 
 	public int top() {
 		if (isEmpty())
-			return -1;
+			return ERR_CODE;
 		return last.value;
 	}
 
 	public int pop() {
 		if (isEmpty())
-			return -1;
+			return ERR_CODE;
 		int ret = last.value;
 		last = last.prev;
 		return ret;
